@@ -7,6 +7,7 @@ from logging.handlers import RotatingFileHandler
 LOG_FILE_NAME = "bot.log"
 PORT = os.environ.get('PORT', '5010')
 OWNER_ID = int(os.environ.get("OWNER_ID", "6497757690"))
+SESSION = os.environ.get("SESSION", "yato")
 
 # Telegram API Configuration
 TOKEN = os.environ.get("TOKEN", "642712") # Replace or set in Heroku
