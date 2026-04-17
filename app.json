@@ -1,0 +1,63 @@
+{
+  "name": "File Store Bot",
+  "description": "Advanced File Store Bot with Shortener and Force Sub support.",
+  "keywords": ["telegram", "bot", "pyrogram", "filestore"],
+  "repository": "https://github.com/redopxxxx-create/FileStore",
+  "env": {
+    "TOKEN": {
+      "description": "Aapka Telegram Bot Token (@BotFather se)",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Aapka API ID (my.telegram.org se)",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Aapka API HASH (my.telegram.org se)",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Aapki Telegram User ID",
+      "value": "6497757690",
+      "required": true
+    },
+    "DB_URI": {
+      "description": "MongoDB Atlas connection string",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "MongoDB Database Name",
+      "value": "yato",
+      "required": false
+    },
+    "DB_CHANNEL": {
+      "description": "Storage Channel ID (e.g. -1003453786108)",
+      "required": true
+    },
+    "SHORT_URL": {
+      "description": "Shortener URL (Default: linkshortify.com)",
+      "value": "linkshortify.com",
+      "required": false
+    },
+    "SHORT_API": {
+      "description": "Shortener API Key",
+      "required": false
+    },
+    "AUTO_DEL": {
+      "description": "Auto delete timer in seconds (Default 300)",
+      "value": "300",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+  }
